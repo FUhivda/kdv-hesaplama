@@ -1,23 +1,23 @@
-# Compiled class file
-*.class
+//Kdv hesaplamak için
+import java.util.Scanner;
+    public class KdvHesaplama {
+    public static void main(String[] args) {
 
-# Log file
-*.log
+        double tutar,kdvOrani1=0.18,kdvOrani2=0.08;
+        Scanner input=new Scanner(System.in);
+        System.out.print("Tutarı giriniz:");
+        tutar= input.nextDouble();
 
-# BlueJ files
-*.ctxt
+         double kdvTutar= tutar>0 && tutar<1000 ? tutar*kdvOrani1:tutar*kdvOrani2;
+        System.out.println("KDV Tutari:" +kdvTutar);
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+         double kdvliTutar= tutar+ kdvTutar;
+        System.out.println(" KDV'li Tutarınız : "+kdvliTutar);
 
-# Package Files #
-*.jar
-*.war
-*.nar
-*.ear
-*.zip
-*.tar.gz
-*.rar
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+
+
+
+
+    }
+}
